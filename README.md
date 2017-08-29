@@ -1,2 +1,3 @@
 DGM1600
 Awesome things from my life.
+I have a dog name Ragnar
