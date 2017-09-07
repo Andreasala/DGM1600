@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class DGM1600 : MonoBehaviour {
 
-	int max = 100;
-	int min = 1;
-	int guess = 50;
+	private int max = 100;
+	private int min = 1;
+	private int guess;
+
+	public int counter;
+
 
 	// Use this for initialization
 	void Start ()
 	{
-		
+		guess = Random.Range(min, max);
 		print ("Welcome To Number Guesser");
 		print ("Pick a number in your head");
 
@@ -29,20 +32,38 @@ public class DGM1600 : MonoBehaviour {
 		{
 			min = guess;
 			guess = (max + min) / 2;
+			counter--;
 			print ("is the number higher or lower than" + guess);
 		}
 		if (Input.GetKeyDown (KeyCode.DownArrow)) 
 		{
 			max = guess;
 			guess = (max + min) /2;
+			counter--;
 			print ("Is the number higher or lower than " + guess);
 		}
 		if (Input.GetKeyUp (KeyCode.Return)) 
 		{
 			print ("I Win");
 		}
+
+		if (counter == 0) {
+
+			//counter--;
+			//print("You win!");
+			if (Input.GetKeyUp (KeyCode.Return)) {
+				print ("I Win");
+			}
+			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow)) {
+				//counter--;
+				print ("You win!");
+			}
+
+
+
+
+		}
 	}
+
 }
-
-
 				
