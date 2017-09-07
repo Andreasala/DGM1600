@@ -25,45 +25,40 @@ public class DGM1600 : MonoBehaviour {
 		print ("Up arrow for higher, Down for lower, Enter for equal");
 		max = max + 1;
 	}
-	// Update is called once per frame 
+	    // Update is called once per frame 
 	void Update ()
 	{
-		if (Input.GetKeyDown(KeyCode.UpArrow))
+		if (counter == -1) 
+		{
+			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow)) 
+			{
+				//counter--;
+				print ("You Win!");
+			}
+		}
+		else if (Input.GetKeyDown(KeyCode.UpArrow))
 		{
 			min = guess;
 			guess = (max + min) / 2;
 			counter--;
 			print ("is the number higher or lower than" + guess);
 		}
-		if (Input.GetKeyDown (KeyCode.DownArrow)) 
+		else if (Input.GetKeyDown (KeyCode.DownArrow)) 
 		{
 			max = guess;
 			guess = (max + min) /2;
 			counter--;
 			print ("Is the number higher or lower than " + guess);
 		}
-		if (Input.GetKeyUp (KeyCode.Return)) 
+	    if (Input.GetKeyUp (KeyCode.Return)) 
 		{
 			print ("I Win");
-		}
+	    }
 
-		if (counter == 0) {
-
-			//counter--;
-			//print("You win!");
-			if (Input.GetKeyUp (KeyCode.Return)) {
-				print ("I Win");
-			}
-			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow)) {
-				//counter--;
-				print ("You win!");
-			}
-
-
-
-
+		if (counter == 0)
+		{ 
+			counter--;
 		}
 	}
-
 }
 				
