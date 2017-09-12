@@ -52,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DGM1600.cs" />
+ <Reference Include="Facebook.Unity.Settings">
+ <HintPath>/Users/10781623/Desktop/DGM1600/Game/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
