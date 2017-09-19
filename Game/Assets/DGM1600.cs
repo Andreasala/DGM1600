@@ -30,13 +30,6 @@ public class DGM1600 : MonoBehaviour {
 		  
 
 
-
-
-
-
-
-
-
 		print ("Welcome To Number Guesser");
 		print ("Pick a number in your head");
 
@@ -56,6 +49,7 @@ public class DGM1600 : MonoBehaviour {
 			{
 				//counter--;
 				print ("You Win!");
+				textBox.text = "\n You Win!";
 			}
 		}
 		else if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -64,6 +58,7 @@ public class DGM1600 : MonoBehaviour {
 			guess = (max + min) / 2;
 			counter--;
 			print ("is the number higher or lower than" + guess);
+			textBox.text = "is the number higher or lower than " + guess;
 		}
 		else if (Input.GetKeyDown (KeyCode.DownArrow)) 
 		{
@@ -71,10 +66,12 @@ public class DGM1600 : MonoBehaviour {
 			guess = (max + min) /2;
 			counter--;
 			print ("Is the number higher or lower than " + guess);
+			textBox.text = "is the number higer or lower than " + guess;
 		}
 	    if (Input.GetKeyUp (KeyCode.Return)) 
 		{
-			print ("I Win");
+			print ("You lose");
+			textBox.text = "You lose";
 	    }
 
 		if (counter == 0)
