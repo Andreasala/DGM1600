@@ -43,6 +43,10 @@ public class DGM1600 : MonoBehaviour {
 	    // Update is called once per frame 
 	void Update ()
 	{
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.Quit ();
+		}
+			
 		if (counter == -1) 
 		{
 			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow)) 
