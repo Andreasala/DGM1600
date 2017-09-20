@@ -22,9 +22,9 @@ public class DGM1600 : MonoBehaviour {
 
 
 		textBox.text = "Welcome to Number Guesser "
-		+ "\npick a numberin your head"
-		+ "\n\nThe Highest number you can pick is" + max
-		+ "\nThe lowest number you can pick is" + min
+		+ "\npick a number in your head"
+		+ "\n\nThe Highest number you can pick is " + max
+		+ "\nThe lowest number you can pick is " + min
 		+ "\n\nIs the number higher or lower than " + guess
 		+ "\nUp arrow for higher, Down for lower, Enter for equal";
 		  
@@ -74,8 +74,8 @@ public class DGM1600 : MonoBehaviour {
 		}
 	    if (Input.GetKeyUp (KeyCode.Return)) 
 		{
-			print ("You lose");
-			textBox.text = "You lose";
+			print ("I Win, You lose");
+			textBox.text = "I Win, You lose";
 	    }
 
 		if (counter == 0)
