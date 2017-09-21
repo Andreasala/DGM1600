@@ -52,8 +52,8 @@ public class DGM1600 : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.UpArrow) || Input.GetKeyDown (KeyCode.DownArrow)) 
 			{
 				//counter--;
-				print ("You Win!");
-				textBox.text = "\n You Win!";
+				print ("I Win!");
+				textBox.text = "\n I Win!";
 			}
 		}
 		else if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -74,8 +74,8 @@ public class DGM1600 : MonoBehaviour {
 		}
 	    if (Input.GetKeyUp (KeyCode.Return)) 
 		{
-			print ("I Win, You lose");
-			textBox.text = "I Win, You lose";
+			print ("You Win, I lose");
+			textBox.text = "You Win, I lose";
 	    }
 
 		if (counter == 0)
